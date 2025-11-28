@@ -42,14 +42,11 @@ url = 'https://taxifare.lewagon.ai/predict'
 
 # --- Call the API only when user clicks ---
 if st.button("Get fare prediction"):
-    st.markdown("running request...")
     response = requests.get(url, params=params)
 
     if response.status_code == 200:
 
-        st.markdown(f"{response.status_code}")
-        st.markdown(f"{response.json()}")
-        prediction = response.json().get("fare_amount")
+        prediction = response.json().get("fare")
         st.success(f"Predicted fare: {prediction} USD")
     else:
         st.error("The API request failed. Please verify the API URL and parameters.")
