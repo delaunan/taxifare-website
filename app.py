@@ -16,7 +16,7 @@ Either as with the title by just creating a string (or an f-string). Or as with 
 '''
 
 # --- User controllers ---
-pickup_datetime = st.text_input("Pickup date and time (format: YYYY-MM-DD HH:MM:SS)",value="2013-07-06 17:18:00")
+pickup_datetime = st.text_input("Pickup date and time")
 pickup_longitude = st.number_input("Pickup longitude", value=-73.985428)
 pickup_latitude = st.number_input("Pickup latitude", value=40.748817)
 dropoff_longitude = st.number_input("Dropoff longitude", value=-73.985428)
